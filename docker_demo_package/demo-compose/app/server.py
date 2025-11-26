@@ -5,8 +5,7 @@ r = redis.Redis(host=os.getenv("REDIS_HOST", "redis"), port=6379)
 class H(BaseHTTPRequestHandler):
     def do_GET(self):
         count = r.incr("hits")
-        msg = f"Hello from {os.getenv('SERVICE_NAME','web')} | hits={count}
-"
+        msg = f"Hello from {os.getenv('SERVICE_NAME','web')} | hits={count}"
         self.send_response(200)
         self.end_headers()
         self.wfile.write(msg.encode())
