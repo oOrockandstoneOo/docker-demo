@@ -1,4 +1,4 @@
-# Demo Docker Base su Debian 13
+# Demo Docker Base su Debian
 
 ## Contenuto
 - demo-dockerfile/: esempio di Dockerfile + index.html
